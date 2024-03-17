@@ -1,5 +1,5 @@
 const initialState = {
-  counter: []
+  counter: 0
 };
 
 function counterReducer(state=initialState, action) {
@@ -7,12 +7,12 @@ function counterReducer(state=initialState, action) {
     case 'INCREASE':
       return {
         ...state, 
-        counter: state.counter + 1
+        counter: +state.counter + 1
       };
     case 'DECREASE':
       return {
         ...state, 
-        counter: state.counter - 1
+        counter: +state.counter - 1
       };
     case 'RESET':
       return initialState;
